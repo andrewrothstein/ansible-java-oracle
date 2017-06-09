@@ -42,8 +42,9 @@
   with_items:
     - f: java-oracle.sh
       d: /etc/profile.d
-      m: '0644'
+    - f: java-oracle.env
+      d: '{{java_oracle_install_dir}}'
   template:
     src: '{{item.f}}.j2'
     dest: '{{item.d}}/{{item.f}}'
-    mode: '{{item.m}}'
+    mode: '{{item.m}|default("0644")}'
