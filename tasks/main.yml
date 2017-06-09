@@ -36,7 +36,7 @@
     dest: '{{java_oracle_link_dir}}'
     state: link
 
-- name: add to default path...
+- name: add to default path and ease systemd integration...
   become: yes
   become_user: root
   with_items:
@@ -47,4 +47,4 @@
   template:
     src: '{{item.f}}.j2'
     dest: '{{item.d}}/{{item.f}}'
-    mode: '{{item.m}|default("0644")}'
+    mode: '{{item.m}|default("0644")}}'
