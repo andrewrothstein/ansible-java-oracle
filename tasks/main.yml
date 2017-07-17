@@ -23,7 +23,7 @@
   become: yes
   become_user: root
   unarchive:
-    remote_src: no
+    remote_src: yes
     src: /tmp/{{java_oracle_tgz}}
     dest: '{{java_oracle_parent_install_dir}}'
     creates: '{{java_oracle_install_dir}}'
