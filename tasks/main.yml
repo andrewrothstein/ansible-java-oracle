@@ -10,4 +10,4 @@
       paths:
         - '{{role_path}}/vars'
 
-- include: '{{java_oracle_installer|default("tgz")}}.yml'
+- include_tasks: '{{java_oracle_installer|default("tgz")}}.yml'
