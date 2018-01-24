@@ -4,15 +4,19 @@
 # jre or jdk
 java_oracle_prefix: jre
 
-java_oracle_ver : 8
-java_oracle_minor_ver : 0
-java_oracle_patch_ver: 131
-java_oracle_post_patch_ver: b11
-
-java_oracle_uuid: d54c1d3a095b4ff2b6607d096fa80163
-java_oracle_platform: linux-x64
 java_oracle_mirror: http://download.oracle.com/otn-pub/java/jdk
+java_oracle_platform: linux-x64
 
+java_oracle_ver:
+  major: 8
+  minor: 0
+  patch: 162
+  post_patch: b12
+  uuid: '0da788060d494f5095bf8624735fa2f1'
+  checksums:
+    jre:
+      'linux-x64': sha256:dfa25ebd1f90bf74ad7ba2dacb0e08d884594e733c9a522b58256778031341a4
+    jdk:
+      'linux-x64': sha256:68ec82d47fd9c2b8eb84225b6db398a72008285fafc98631b1ff8d2229680257
+  
 java_oracle_parent_install_dir: /usr/local
-
-java_oracle_cleanup: False
