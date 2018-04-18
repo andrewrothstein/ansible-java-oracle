@@ -10,13 +10,14 @@ java_oracle_platform: linux-x64
 java_oracle_ver:
   major: 8
   minor: 0
-  patch: 162
-  post_patch: b12
-  uuid: '0da788060d494f5095bf8624735fa2f1'
+  patch: 172
+  post_patch: b11
+  uuid: 'a58eab1ec242421181065cdc37240b08'
   checksums:
     jre:
-      'linux-x64': sha256:dfa25ebd1f90bf74ad7ba2dacb0e08d884594e733c9a522b58256778031341a4
+      'linux-x64': sha256:f08f25aec2bdc86138ccba8fd5b904451e3afa1d24a88c85f28c2d84bfd45bad
     jdk:
-      'linux-x64': sha256:68ec82d47fd9c2b8eb84225b6db398a72008285fafc98631b1ff8d2229680257
-  
+      'linux-x64': sha256:28a00b9400b6913563553e09e8024c286b506d8523334c93ddec6c9ec7e9d346
+
 java_oracle_parent_install_dir: /usr/local
+
