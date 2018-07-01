@@ -20,4 +20,3 @@ java_oracle_ver:
       'linux-x64': sha256:28a00b9400b6913563553e09e8024c286b506d8523334c93ddec6c9ec7e9d346
 
 java_oracle_parent_install_dir: /usr/local
-
