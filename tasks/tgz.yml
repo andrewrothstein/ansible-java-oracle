@@ -11,11 +11,13 @@
       become: yes
       become_user: root
       get_url:
-        headers: Cookie:oraclelicense=accept-securebackup-cookie
+        headers:
+          Cookie: oraclelicense=accept-securebackup-cookie
         url: '{{java_oracle_tgz_url}}'
         dest: /tmp/{{java_oracle_tgz}}
         checksum: '{{java_oracle_checksum}}'
         mode: 0644
+        timeout: '{{java_oracle_timeout_seconds}}'
     - name: unarchive....
       become: yes
       become_user: root
