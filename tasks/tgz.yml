@@ -2,7 +2,7 @@
 - name: check for install..
   become: yes
   stat:
-    path: '{{java_oracle_install_dir}}'
+    path: '{{ java_oracle_install_dir }}'
   changed_when: False
   register: java_oracle_binary
 - when: not java_oracle_binary.stat.exists
@@ -13,32 +13,32 @@
       get_url:
         headers:
           Cookie: oraclelicense=accept-securebackup-cookie
-        url: '{{java_oracle_tgz_url}}'
-        dest: /tmp/{{java_oracle_tgz}}
-        checksum: '{{java_oracle_checksum}}'
+        url: '{{ java_oracle_tgz_url }}'
+        dest: /tmp/{{ java_oracle_tgz }}
+        checksum: '{{ java_oracle_checksum }}'
         mode: 0644
-        timeout: '{{java_oracle_timeout_seconds}}'
+        timeout: '{{ java_oracle_timeout_seconds }}'
     - name: unarchive....
       become: yes
       become_user: root
       unarchive:
         remote_src: yes
-        src: /tmp/{{java_oracle_tgz}}
-        dest: '{{java_oracle_parent_install_dir}}'
-        creates: '{{java_oracle_install_dir}}'
+        src: /tmp/{{ java_oracle_tgz }}
+        dest: '{{ java_oracle_parent_install_dir }}'
+        creates: '{{ java_oracle_install_dir }}'
   always:
     - name: cleanup
       become: yes
       become_user: root
       file:
-        path: /tmp/{{java_oracle_tgz}}
+        path: /tmp/{{ java_oracle_tgz }}
         state: absent
 - name: link....
   become: yes
   become_user: root
   file:
-    src: '{{java_oracle_install_dir}}'
-    dest: '{{java_oracle_link_dir}}'
+    src: '{{ java_oracle_install_dir }}'
+    dest: '{{ java_oracle_link_dir }}'
     state: link
 
 - name: add to default path and ease systemd integration...
@@ -48,8 +48,8 @@
     - f: java-oracle.sh
       d: /etc/profile.d
     - f: java-oracle.env
-      d: '{{java_oracle_install_dir}}'
+      d: '{{ java_oracle_install_dir }}'
   template:
-    src: '{{item.f}}.j2'
-    dest: '{{item.d}}/{{item.f}}'
-    mode: '{{item.m|default("0644")}}'
+    src: '{{ item.f }}.j2'
+    dest: '{{ item.d }}/{{ item.f }}'
+    mode: '{{ item.m|default("0644") }}'
