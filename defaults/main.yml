@@ -10,13 +10,15 @@ java_oracle_platform: linux-x64
 java_oracle_ver:
   major: 8
   minor: 0
-  patch: 192
+  patch: 202
   post_patches:
     '8u181': b13
     '8u192': b12
+    '8u202': b08
   uuids:
     '8u181': '96a7b8442fe848ef90c96a2fad6ed6d1'
     '8u192': '750e1c8617c5452694857ad95c3ee230'
+    '8u202': '1961070e4c9b4e26a04e7f5a083f551e'
   checksums:
     '8u181':
       # https://www.oracle.com/webfolder/s/digest/8u181checksum.html
@@ -32,6 +34,14 @@ java_oracle_ver:
         linux-x64: sha256:6d34ae147fc5564c07b913b467de1411c795e290356538f22502f28b76a323c2
       server-jre:
         linux-x64: sha256:3d811a5ec65dc6fc261f488757bae86ecfe285a79992363b016f60cdb4dbe7e6
+    '8u202':
+      # https://www.oracle.com/webfolder/s/digest/8u202checksum.html
+      jre:
+        linux-x64: sha256:9efb1493fcf636e39c94f47bacf4f4324821df2d3aeea2dc3ea1bdc86428cb82
+      jdk:
+        linux-x64: sha256:9a5c32411a6a06e22b69c495b7975034409fa1652d03aeb8eb5b6f59fd4594e0
+      server-jre:
+        linux-x64: sha256:61292e9d9ef84d9702f0e30f57b208e8fbd9a272d87cd530aece4f5213c98e4e
 
 
 java_oracle_parent_install_dir: /usr/local
