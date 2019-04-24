@@ -10,18 +10,22 @@ java_oracle_platform: linux-x64
 java_oracle_ver:
   major: 8
   minor: 0
-  patch: 202
+  patch: 212
   post_patches:
     '8u181': b13
     '8u192': b12
     '8u202': b08
+    '8u211': b12
+    '8u212': b10
   uuids:
     '8u181': '96a7b8442fe848ef90c96a2fad6ed6d1'
     '8u192': '750e1c8617c5452694857ad95c3ee230'
     '8u202': '1961070e4c9b4e26a04e7f5a083f551e'
+    '8u211': '478a62b7d4e34b78b671c754eaaf38ab'
+    '8u212': '59066701cf1a433da9770636fbc4c9aa'
   checksums:
     '8u181':
-      # https://www.oracle.com/webfolder/s/digest/8u181checksum.html
+      # https://www.oracle.com/webfolder/s/digest/8u181checksum.html[<8;156;24m[<8;172;38m
       jre:
         linux-x64: sha256:0b26c7fcfad20029e6e0989e678efcd4a81f0fe502a478b4972215533867de1b
       jdk:
@@ -42,7 +46,22 @@ java_oracle_ver:
         linux-x64: sha256:9a5c32411a6a06e22b69c495b7975034409fa1652d03aeb8eb5b6f59fd4594e0
       server-jre:
         linux-x64: sha256:61292e9d9ef84d9702f0e30f57b208e8fbd9a272d87cd530aece4f5213c98e4e
-
+    '8u211':
+      # https://www.oracle.com/webfolder/s/digest/8u211checksum.html
+      jre:
+        linux-x64: sha256:db3ba91c78b950269380d8f6872befed94176f619cefbcd7877e3624512e0218
+      jdk:
+        linux-x64: sha256:c0b7e45330c3f79750c89de6ee0d949ed4af946849592154874d22abc9c4668d
+      server-jre:
+        linux-x64: sha256:97a5c3f10678d309a60ab0b17be0d637adb9fa4131050da0736bf2214d521d2d
+    '8u212':
+      # https://www.oracle.com/webfolder/s/digest/8u212checksum.html
+      jre:
+        linux-x64: sha256:5690fb12a2fa312efe79221bf6b626e565f1144260da21284f4129566f163dde
+      jdk:
+        linux-x64: sha256:3160c50aa8d8e081c8c7fe0f859ea452922eca5d2ae8f8ef22011ae87e6fedfb
+      server-jre:
+        linux-x64: sha256:83362fba28841559668de3be79baf77d3782374aee9a7e1dde0c02c6775ef172
 
 java_oracle_parent_install_dir: /usr/local
 java_oracle_timeout_seconds: 600
